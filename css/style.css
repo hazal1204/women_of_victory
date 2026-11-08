@@ -1,0 +1,731 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f3eee5;
+  color: #302824;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.screen {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.screen[hidden] {
+  display: none;
+}
+
+.subtitle {
+  color: #8c5b56;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.symbol {
+  margin: 30px 0 12px;
+  color: #923e49;
+  font-size: 32px;
+}
+
+h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(42px, 10vw, 56px);
+  line-height: 1.1;
+  margin: 16px 0;
+}
+
+h1 span {
+  display: block;
+  color: #923e49;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #655b54;
+  margin: 24px 0 36px;
+}
+
+.main-button {
+  background: #923e49;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 17px 32px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.main-button:hover {
+  background: #752d38;
+}
+
+.footer-text {
+  margin-top: 35px;
+  color: #85776c;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #923e49;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+.hero-card {
+  background: #fffaf2;
+  border: 1px solid #e2d4c4;
+  border-radius: 18px;
+  padding: 22px;
+  text-align: left;
+  line-height: 1.7;
+}
+
+.photo-placeholder {
+  background: #e5d9c9;
+  height: 190px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #877568;
+  font-size: 14px;
+}
+
+h2 {
+  font-family: Georgia, serif;
+  font-size: 25px;
+  line-height: 1.3;
+}
+
+.hero-info {
+  color: #923e49;
+  font-size: 14px;
+}
+
+
+.secondary-button {
+  background: transparent;
+  color: #923e49;
+  border: 1px solid #923e49;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 12px;
+}
+
+#nextButton {
+  margin-top: 20px;
+}
+
+#sourceLink {
+  color: #923e49;
+  font-size: 13px;
+}
+
+#heroDetails {
+  line-height: 1.8;
+  color: #51463e;
+}
+
+
+/* Оформление исторической фотографии */
+
+.photo-placeholder {
+  height: auto;
+  aspect-ratio: 4 / 5;
+  max-height: 360px;
+  overflow: hidden;
+  background: #e5d9c9;
+}
+
+.photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.photo-placeholder img[hidden] {
+  display: none;
+}
+
+.photo-placeholder span {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Удобство использования на телефоне */
+
+button {
+  font-family: inherit;
+  transition: background-color 0.2s ease;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #b67a54;
+  outline-offset: 3px;
+}
+
+.hero-card p {
+  overflow-wrap: break-word;
+}
+
+
+/* =================================
+   ОФОРМЛЕНИЕ АРХИВНОЙ КАРТОЧКИ
+================================= */
+
+body {
+  background: linear-gradient(
+    180deg,
+    #f8f4ec 0%,
+    #ede3d6 100%
+  );
+}
+
+.app {
+  padding: 30px 18px;
+}
+
+.screen {
+  max-width: 440px;
+}
+
+/* Основная карточка */
+
+.hero-card {
+  background: #fffaf2;
+  border: 1px solid #d9c8b5;
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0 8px 30px rgba(70, 45, 30, 0.08);
+}
+
+/* Верхняя архивная надпись */
+
+.card-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  color: #923e49;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.card-topline span:last-child {
+  font-size: 20px;
+}
+
+/* Историческая фотография */
+
+.photo-placeholder {
+  height: 300px;
+  aspect-ratio: auto;
+  max-height: none;
+  background: #e8dfd2;
+  border: 1px solid #dfd0bf;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Имя героини */
+
+#heroName {
+  font-family: Georgia, serif;
+  font-size: 27px;
+  line-height: 1.25;
+  color: #332720;
+  margin: 22px 0 8px;
+  overflow-wrap: break-word;
+}
+
+/* Годы жизни */
+
+#heroYears {
+  color: #923e49;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 0 15px;
+}
+
+/* Род деятельности */
+
+#heroRole {
+  display: inline-block;
+  background: #f1e3dc;
+  color: #7d3441;
+  padding: 7px 13px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 0 0 12px;
+}
+
+/* Краткая биография */
+
+#heroSummary {
+  color: #493d35;
+  font-size: 15px;
+  line-height: 1.8;
+  margin: 10px 0 18px;
+}
+
+/* Расширенная биография */
+
+#heroDetails:not([hidden]) {
+  background: #f5eee5;
+  border-left: 3px solid #923e49;
+  padding: 15px;
+  border-radius: 0 10px 10px 0;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Кнопка "Узнать больше" */
+
+.secondary-button {
+  border: 1px solid #923e49;
+  color: #923e49;
+  background: transparent;
+  border-radius: 12px;
+  padding: 14px;
+  font-weight: bold;
+}
+
+.secondary-button:hover {
+  background: #f1e3dc;
+}
+
+/* Ссылка на исторический источник */
+
+#sourceLink {
+  color: #923e49;
+  font-size: 13px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Кнопка "Другая героиня" */
+
+#nextButton {
+  margin-top: 20px;
+  box-shadow: 0 5px 15px rgba(146, 62, 73, 0.15);
+}
+
+/* Адаптация для небольших телефонов */
+
+@media (max-width: 380px) {
+  .hero-card {
+    padding: 16px;
+  }
+
+  #heroName {
+    font-size: 23px;
+  }
+
+  .photo-placeholder {
+    height: 250px;
+  }
+}
+
+
+/* Даты жизни */
+
+.hero-dates {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.hero-dates > div {
+  background: #f5eee5;
+  padding: 13px;
+  border-radius: 12px;
+}
+
+.hero-dates span {
+  display: block;
+  color: #877568;
+  font-size: 11px;
+  margin-bottom: 6px;
+}
+
+.hero-dates strong {
+  display: block;
+  color: #493d35;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Блок наград */
+
+.awards-section {
+  margin: 20px 0;
+  padding-top: 18px;
+  border-top: 1px solid #e2d4c4;
+}
+
+.awards-section h3 {
+  font-family: Georgia, serif;
+  font-size: 19px;
+  color: #332720;
+  margin: 0 0 14px;
+}
+
+#heroAwards {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+#heroAwards li {
+  position: relative;
+  background: #f5eee5;
+  padding: 11px 12px 11px 32px;
+  border-radius: 10px;
+  color: #493d35;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+#heroAwards li::before {
+  content: "✦";
+  position: absolute;
+  left: 12px;
+  top: 11px;
+  color: #923e49;
+}
+
+/* Дополнительный источник */
+
+#factsSourceLink {
+  color: #923e49;
+  font-size: 13px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Узкие экраны */
+
+@media (max-width: 360px) {
+  .hero-dates {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Место рождения */
+
+.birthplace {
+  margin: 12px 0 18px;
+  padding: 13px 15px;
+  background: #f5eee5;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.birthplace span {
+  display: block;
+  color: #877568;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+#heroBirthPlace {
+  margin: 0;
+  color: #493d35;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Подвиг */
+
+.feat-section {
+  margin: 20px 0;
+  padding: 18px;
+  background: #f1e7dc;
+  border-left: 4px solid #923e49;
+  border-radius: 0 12px 12px 0;
+}
+
+.feat-section h3 {
+  margin: 0 0 10px;
+  color: #923e49;
+  font-family: Georgia, serif;
+  font-size: 20px;
+}
+
+#heroFeat {
+  margin: 0;
+  color: #493d35;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Интересный факт */
+
+.fact-section {
+  margin: 16px 0;
+  padding: 18px;
+  background: #f7efe1;
+  border: 1px solid #dfc8aa;
+  border-radius: 12px;
+}
+
+.fact-section h3 {
+  margin: 0 0 10px;
+  color: #923e49;
+  font-family: Georgia, serif;
+  font-size: 19px;
+}
+
+#heroFact {
+  margin: 0;
+  color: #493d35;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+
+/* Кнопка каталога на главном экране */
+
+.browse-button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 16px 24px;
+  background: transparent;
+  border: 1px solid #923e49;
+  border-radius: 12px;
+  color: #923e49;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.browse-button:hover {
+  background: #f1e3dc;
+}
+
+/* Экран каталога */
+
+#catalog {
+  max-width: 520px;
+  text-align: left;
+}
+
+.catalog-title {
+  margin: 12px 0;
+  color: #332720;
+  font-family: Georgia, serif;
+  font-size: 30px;
+}
+
+.catalog-description {
+  color: #655b54;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+/* Поиск и категории */
+
+.catalog-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.catalog-controls label {
+  color: #493d35;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.catalog-controls input,
+.catalog-controls select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d9c8b5;
+  border-radius: 12px;
+  background: #fffaf2;
+  color: #332720;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.catalog-controls input:focus,
+.catalog-controls select:focus {
+  outline: 2px solid #923e49;
+  outline-offset: 2px;
+}
+
+.catalog-count {
+  margin: 24px 0 14px;
+  color: #877568;
+  font-size: 13px;
+}
+
+/* Список героинь */
+
+.catalog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.catalog-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  padding: 12px;
+  background: #fffaf2;
+  border: 1px solid #e2d4c4;
+  border-radius: 14px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.catalog-card:hover {
+  background: #f5eee5;
+  border-color: #923e49;
+}
+
+.catalog-card:focus-visible {
+  outline: 3px solid #b67a54;
+  outline-offset: 3px;
+}
+
+.catalog-card img {
+  width: 76px;
+  height: 94px;
+  object-fit: contain;
+  background: #e5d9c9;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.catalog-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.catalog-card-info strong {
+  color: #332720;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  line-height: 1.3;
+  overflow-wrap: break-word;
+}
+
+.catalog-card-info span {
+  color: #923e49;
+  font-size: 13px;
+}
+
+.catalog-card-info small {
+  color: #877568;
+  font-size: 12px;
+}
+
+.catalog-empty {
+  padding: 25px 15px;
+  color: #655b54;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Скрытие кнопки в режиме каталога */
+
+#nextButton[hidden] {
+  display: none;
+}
+
+@media (max-width: 380px) {
+  .catalog-card img {
+    width: 65px;
+    height: 82px;
+  }
+
+  .catalog-card-info strong {
+    font-size: 15px;
+  }
+}
+
+
+/* Красивое выпадающее меню категорий */
+
+#categoryFilter {
+  -webkit-appearance: none;
+  appearance: none;
+
+  display: block;
+  width: 100%;
+  min-height: 52px;
+
+  padding: 14px 44px 14px 16px;
+
+  background-color: #fffaf2;
+  border: 1px solid #d9c8b5;
+  border-radius: 12px;
+
+  color: #332720;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+
+  cursor: pointer;
+
+  background-image:
+    linear-gradient(45deg, transparent 50%, #923e49 50%),
+    linear-gradient(135deg, #923e49 50%, transparent 50%);
+
+  background-position:
+    calc(100% - 21px) center,
+    calc(100% - 15px) center;
+
+  background-size: 6px 6px;
+  background-repeat: no-repeat;
+}
+
+#categoryFilter:focus {
+  outline: 2px solid #923e49;
+  outline-offset: 2px;
+}
+

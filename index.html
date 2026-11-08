@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Женщины Победы</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/heroines.js" defer></script>
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+    <main class="app">
+
+        <!-- Приветственный экран -->
+        <section id="welcome" class="screen">
+            <p class="subtitle">Исторический проект</p>
+
+            <div class="symbol">✦</div>
+
+            <h1>Женщины <span>Победы</span></h1>
+
+            <p class="description">
+                Их подвиги стали частью истории.
+                Откройте для себя судьбы женщин,
+                которые приближали Победу.
+            </p>
+
+            <button id="openStory" class="main-button">
+                Открыть историю
+            </button>
+
+            <button id="browseButton" class="browse-button" type="button">
+                Найти героиню
+            </button>
+
+            <p class="footer-text">
+                Каждая история заслуживает памяти.
+            </p>
+        </section>
+
+        <!-- Экран биографии -->
+        <section id="story" class="screen" hidden>
+            <button id="backButton" class="back-button">
+                ← На главную
+            </button>
+
+            <p class="subtitle">История героини</p>
+
+            <article class="hero-card">
+                <div class="card-topline">
+                    <span>АРХИВ ПАМЯТИ</span>
+                    <span aria-hidden="true">✦</span>
+                </div>
+
+                <div class="photo-placeholder">
+                    <img id="heroPhoto" alt="" hidden>
+
+                    <span id="photoFallback">
+                        Фотография пока не добавлена
+                    </span>
+                </div>
+
+
+                <h2 id="heroName"></h2>
+                <div class="hero-dates">
+                    <div>
+                        <span>Дата рождения</span>
+                        <strong id="heroBirth"></strong>
+                    </div>
+
+                    <div>
+                        <span>Дата смерти</span>
+                        <strong id="heroDeath"></strong>
+                    </div>
+                </div>
+                <p id="heroRole"></p>
+                <div class="birthplace">
+                    <span>Место рождения</span>
+                    <p id="heroBirthPlace"></p>
+                </div>
+
+                <p id="heroSummary"></p>
+                <section class="feat-section">
+                    <h3>Подвиг</h3>
+                    <p id="heroFeat"></p>
+                </section>
+                <section class="awards-section">
+                    <h3>Основные награды</h3>
+                    <ul id="heroAwards"></ul>
+                </section>
+
+                <p id="heroDetails" hidden></p>
+                <section id="heroFactBox" class="fact-section" hidden>
+                    <h3>Интересный факт</h3>
+                    <p id="heroFact"></p>
+                </section>
+                <button id="moreButton" class="secondary-button">
+                    Узнать больше
+                </button>
+
+                <p>
+                    <a id="sourceLink" href="#" target="_blank" rel="noopener noreferrer">
+                        Исторический источник
+                    </a>
+                </p>
+
+                <p class="facts-source">
+                    <a id="factsSourceLink" href="#" target="_blank" rel="noopener noreferrer">
+                        Источник дат и наград
+                    </a>
+                </p>
+
+            </article>
+
+            <button id="nextButton" class="main-button">
+                Другая героиня
+            </button>
+        </section>
+
+
+        <section id="catalog" class="screen" hidden>
+
+            <button id="catalogBackButton" class="back-button" type="button">
+                ← На главную
+            </button>
+
+            <p class="subtitle">Цифровой архив</p>
+            <h2 class="catalog-title">Каталог героинь</h2>
+
+            <p class="catalog-description">
+                Найдите героиню по имени, специальности
+                или выберите интересующую категорию.
+            </p>
+
+            <div class="catalog-controls">
+                <label for="searchInput">Поиск</label>
+                <input id="searchInput" type="search" placeholder="Например, Лидия Литвяк" autocomplete="off">
+
+                <label for="categoryFilter">Категория</label>
+                <select id="categoryFilter">
+                    <option value="all">Все категории</option>
+                    <option value="Медицина">Медицина</option>
+                    <option value="Разведка и партизаны">Разведка и партизаны</option>
+                    <option value="Стрелковые войска">Стрелковые войска</option>
+                    <option value="Танковые войска">Танковые войска</option>
+                    <option value="Авиация">Авиация</option>
+                </select>
+            </div>
+
+            <p id="catalogCount" class="catalog-count" aria-live="polite"></p>
+
+            <div id="catalogList" class="catalog-list"></div>
+
+        </section>
+
+        <section id="completed" class="screen" hidden>
+            <div class="symbol">✦</div>
+
+            <h2>Все истории просмотрены</h2>
+
+            <p class="description">
+                Вы познакомились со всеми героинями
+                нашей небольшой коллекции.
+                Хотите открыть их истории снова?
+            </p>
+
+            <button id="restartButton" class="main-button">
+                Начать заново
+            </button>
+        </section>
+
+    </main>
+</body>
+
+</html>
